@@ -22,7 +22,7 @@ A bit of JavaScript for replacing the page body with an externally loaded page's
 - `l()` takes only one argument, `page`, same as `ld()`
 
 ## Other
-- I've only tested this in Chrome and Firefox. I'm not a very experienced web dev, but the code is so simple that I can't imagine it could go wrong in other browsers.
+- I've only tested this in Chrome and Firefox. I'm not a very experienced web dev, but the code is so simple that I can't imagine it going wrong in other browsers.
 - The XMLHttpRequest this script makes is asynchronous. I think synchronous requests on the main thread are deprecated or something.
 - You can use https://raw.githubusercontent.com/RealCG/ld.js/master/ld.js as a sort of CDN link for the script if you want:
 ```HTML
