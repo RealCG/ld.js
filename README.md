@@ -1,5 +1,5 @@
 # ld.js
-A tiny JavaScript file for fetching the &lt;body> of another page and swapping it with the current one.
+A bit of JavaScript for replacing the page body with an externally loaded page's body.
 
 ## Usage
 - Add a new `<script>` tag to your document's head, like so:
@@ -10,7 +10,13 @@ A tiny JavaScript file for fetching the &lt;body> of another page and swapping i
 ```HTML
 <button onclick="ld('/otherpage.html')">Click to go to another page!</button>
 ```
-- To replace the current document's body with an entire file, do the same, but use `l()` instead of `ld()`. The only difference is that `ld()` searches for the `<body>` tag, while `l()` does not, it just replaces the body's `innerHTML` with the file.
+- To replace the current document's body with an entire file, do the same, but use `l()` instead of `ld()`. The only difference is that `ld()` searches for the `<body>` tag, while `l()` does not.
 ```HTML
 <button onclick="l('/otherdata.txt')">Click to see other data!</button>
 ```
+
+## Parameters
+- `ld()` takes two arguments, `page` and `getTitle`.
+  - `page` is the path (string) to the page you are taking the body from.
+  - `getTitle` is a boolean saying whether you want to replace the current page's `<title>` with the one from the new file.
+- `l()` takes only one argument, `page`, same as `ld()`
