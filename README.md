@@ -21,6 +21,15 @@ A bit of JavaScript for replacing the page body with an externally loaded page's
   - `getTitle` is a boolean saying whether you want to replace the current page's `<title>` with the one from the new file.
 - `l()` takes only one argument, `page`, same as `ld()`
 
+## Use Cases
+- Your pages all have the same content in the `<head>` tag, and you don't want to keep retyping/copy+pasting it.
+  - This script accounts for differences in the `<title>` tag.
+
+## Caveats
+- Selected elements in the body are probably all invalidated when `l()` or `ld()` are used, so you have to keep track of when the body changes.
+- This entire thing could probably be done much more elegantly in jQuery.
+- This is only useful in weird edge-cases and I'm completely aware of that.
+
 ## Other
 - I've only tested this in Chrome and Firefox. I'm not a very experienced web dev, but the code is so simple that I can't imagine it going wrong in other browsers.
 - The XMLHttpRequest this script makes is asynchronous. I think synchronous requests on the main thread are deprecated or something.
